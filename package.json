@@ -32,10 +32,23 @@
       "last 1 safari version"
     ]
   },
-  "prettier": {    
+  "prettier": {
     "trailingComma": "es5",
     "tabWidth": 4,
     "semi": false,
     "singleQuote": true
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "App.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richandcreamy/flash-card.git"
+  },
+  "author": "Richie Edquid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richandcreamy/flash-card/issues"
+  },
+  "homepage": "https://github.com/richandcreamy/flash-card#readme"
 }
