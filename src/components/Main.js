@@ -5,17 +5,20 @@ import CardEditor from './CardEditor'
 export class Main extends Component {
 constructor (props) {
     super(props)
-        this.state = {flip: true}
+        this.state = {flip: true, cards: [{id:1, front:"front of card 1", back:"back of card 1"}, {id:2, front:"front of card 2", back:"back of card 2"}, {id:3, front:"front of card 3", back:"back of card 3"}]}
 }
 
 flipMe = () => {
     this.setState({flip: !this.state.flip})
 }
-
-    render() {
+addMe = (newCard) => {
+    this.setState(state => ({cards:[...state.cards, newCard]}) )
+}
+    
+render() {
         return (
             <div>
-                { this.state.flip ? <Viewer /> : <CardEditor /> }
+                { this.state.flip ? <Viewer cards = {this.state.cards} /> : <CardEditor addMe = {this.addMe} /> }
                 
                 <button onClick= {this.flipMe} >Switch</button>
             </div>
